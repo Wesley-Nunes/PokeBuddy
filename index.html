@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimun-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./src/pokeball-fav-icon.png" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Gotta Catch 'Em All</title>
+  </head>
+  <body>
+    <main id="main-wrapper" class="flex-col">
+      <header>
+        <img
+          src="./src/pokelogo.png"
+          alt="logo da marca pokemon"
+          id="pokemon-logo"
+        />
+      </header>
+      <section id="main-section" class="flex-col">
+        <h2 id="title">
+          Abra a pokebola para ganhar um pokémon e iniciar sua jornada!
+        </h2>
+        <input
+          type="image"
+          src="./src/pokeball.png"
+          alt="pokebola fechada"
+          id="pokeball"
+        />
+        <!-- Seção inicialmente oculta -->
+        <div id="pokemon-section">
+          <button id="close-btn">X</button>
+          <div id="adventure">
+            <p class="adventure-text">
+              Agora, junto com <span id="choosed-poke-name"></span>, você está
+              pronto para iniciar sua jornada.
+            </p>
+            <p class="adventure-text">
+              Vocês encontraram amigos fantásticos, aventuras sem fim, e
+              criaturas que jamais imaginariam ver.
+            </p>
+            <p class="adventure-text">
+              Você desvendará a magia e o mistério dos lugares mais
+              inacreditáveis.
+            </p>
+            <p class="adventure-text">
+              Aventure-se no mundo incrível dos pokémons.
+            </p>
+            <img
+              src="./src/pokeball-icon.png"
+              alt="#"
+              id="pokemon-icon"
+              class="center-content"
+            />
+            <button id="continue" class="center-content">continuar</button>
+          </div>
+          <img
+            src="./src/loading.gif"
+            alt="carregando informações"
+            id="img"
+            class="center-content"
+          />
+          <p id="name" class="info-content">
+            Nome: <span id="poke-name"></span>
+          </p>
+          <p id="type" class="info-content">
+            Tipo: <span id="poke-type"></span>
+          </p>
+          <span id="action-btns" class="flex-row">
+            <button id="choose-another">escolher outro pokémon?</button>
+            <button id="confirm-adventure">iniciar jornada!</button>
+          </span>
+        </div>
+      </section>
+      <footer id="more-info" class="flex-row">
+        <p>
+          Site desenvolvido por
+          <a
+            href="https://www.linkedin.com/in/dev-wesley-nunes/"
+            target="_blank"
+            >@Wesley-Nunes</a
+          >
+        </p>
+        <p>
+          Para mais informações acesse o
+          <a href="#" target="_blank">repositorio no github.</a>
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
