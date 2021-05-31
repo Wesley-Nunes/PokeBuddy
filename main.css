@@ -1,0 +1,222 @@
+/*Global*/
+:root {
+  font-size: 62.5%;
+
+  --base-color: hsl(0, 0%, 91%);
+  --blue: hsl(206, 100%, 35%);
+  --red: hsl(3, 86%, 58%);
+  --yellow: hsl(48, 100%, 50%);
+}
+
+* {
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1.8rem "Roboto", sans-serif;
+
+  background-color: var(--base-color);
+}
+
+button {
+  font: small-caps 600 2rem monospace;
+
+  color: white;
+
+  height: 7rem;
+  width: 17rem;
+
+  display: block;
+
+  border: none;
+
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+a {
+  color: var(--red);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/*Page Structure */
+.flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.center-content {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Header Content*/
+#pokemon-logo {
+  width: 54rem;
+
+  margin: 2rem 0;
+}
+
+/*Main Content*/
+#main-section {
+  height: 75rem;
+  width: 54rem;
+}
+
+#title {
+  font-size: 2rem;
+  text-align: center;
+
+  padding: 2.5rem 0;
+}
+
+#pokeball {
+  width: 35rem;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+#pokeball:hover {
+  box-shadow: 0 0 1.7rem 2rem hsl(72, 100%, 99%);
+}
+
+#pokemon-section {
+  background-color: lightgray;
+
+  height: 65rem;
+  width: 54rem;
+
+  display: none;
+  position: absolute;
+
+  padding: 2rem;
+
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.19),
+    0 0.6rem 0.6rem hsla(0, 0%, 0%, 0.23);
+}
+
+#close-btn {
+  background-color: black;
+
+  height: 5rem;
+  width: 5rem;
+
+  margin-left: auto;
+}
+
+#pokemon-section #close-btn:hover {
+  color: var(--red);
+}
+
+#adventure {
+  background-color: lightgray;
+
+  height: 55rem;
+  width: 50rem;
+
+  display: none;
+  position: absolute;
+
+  margin-top: 1rem;
+}
+
+.adventure-text {
+  text-indent: 0;
+
+  padding: 0.5rem;
+}
+
+.adventure-text:nth-child(1),
+.adventure-text:nth-child(4) {
+  width: 50%;
+}
+
+.adventure-text:nth-child(2),
+.adventure-text:nth-child(3) {
+  width: 70%;
+}
+
+#pokemon-icon {
+  height: 9.6rem;
+  width: 9.6rem;
+}
+
+#continue {
+  font-size: 3rem;
+
+  background-color: var(--yellow);
+}
+
+#continue:hover {
+  color: black;
+
+  box-shadow: 0 0 3rem var(--yellow);
+}
+
+#img {
+  height: 40rem;
+  width: 35rem;
+}
+
+.info-content {
+  text-indent: 13rem;
+
+  margin: 1rem;
+}
+
+#action-btns {
+  margin-top: 2rem;
+}
+
+#choose-another {
+  background-color: var(--red);
+}
+#choose-another:hover {
+  box-shadow: -1rem 0.5rem 2rem var(--red);
+  color: black;
+}
+#confirm-adventure {
+  background-color: var(--blue);
+}
+#confirm-adventure:hover {
+  color: black;
+
+  box-shadow: 1rem 0.5rem 2rem var(--blue);
+}
+
+/*Footer Content*/
+#more-info {
+  min-height: 10rem;
+  width: 100%;
+
+  align-items: center;
+
+  padding: 0 4rem;
+
+  border-top: solid 1rem lightgray;
+}
+
+/*Media Query*/
