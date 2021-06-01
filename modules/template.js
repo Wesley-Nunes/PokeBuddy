@@ -5,7 +5,6 @@ const section = new WeakMap();
 export class Template {
   constructor() {
     section.set(this, new HtmlUtils());
-    console.log(section);
   }
 
   showSection() {

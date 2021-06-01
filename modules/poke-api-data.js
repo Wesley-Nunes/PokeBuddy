@@ -3,8 +3,10 @@ import { RandomNumber } from "./random-number.js";
 export class PokeApiData extends RandomNumber {
   constructor() {
     super();
+
     this.apiData = {};
   }
+
   request() {
     return new Promise((resolve, reject) => {
       let dataRequest = new XMLHttpRequest();
@@ -14,8 +16,14 @@ export class PokeApiData extends RandomNumber {
           if (dataRequest.status === 200) {
             this.cleanData(dataRequest);
             resolve(this.apiData);
-          } else if (dataRequest.status > 200) {
-            reject("error");
+          } else if (dataRequest.status >= 203) {
+            reject(
+              alert(`
+              Pokémons com preguiça de aparecer.
+              Por favor, verifique sua conexão com a internet,
+              e tente novamente!
+              `)
+            );
           }
         }
       };
@@ -25,9 +33,11 @@ export class PokeApiData extends RandomNumber {
         `https://pokeapi.co/api/v2/pokemon/${this.number}`,
         true
       );
+
       dataRequest.send();
     });
   }
+
   cleanData(dataRequest) {
     const data = JSON.parse(dataRequest.response);
 

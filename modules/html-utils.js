@@ -1,12 +1,6 @@
 import { PokeApiData } from "./poke-api-data.js";
 
-const api = new WeakMap();
-
 export class HtmlUtils {
-  constructor() {
-    api.set(this, new PokeApiData());
-  }
-
   style(mainSection, childSection) {
     let section = document.querySelector("#pokemon-section");
 
@@ -15,13 +9,16 @@ export class HtmlUtils {
   }
 
   async addElementsToHtml() {
-    let data = await api.get(this).request();
+    const myApi = new PokeApiData();
+    const data = await myApi.request();
     let values = [data.image, data.name, data.type, data.name, data.icon];
+
     this.element(values);
   }
 
   resetElementsToHtml() {
     let values = ["./src/loading.gif", "", "", "", "./src/pokeball-icon.png"];
+
     this.element(values);
   }
 
@@ -47,6 +44,7 @@ export class HtmlUtils {
     let icon = (value) => {
       document.querySelector("#pokemon-icon").src = value;
     };
+
     return [image, name, type, choosePokeName, icon];
   }
 }
