@@ -1,4 +1,5 @@
 /*Global*/
+
 :root {
   font-size: 62.5%;
 
@@ -103,7 +104,7 @@ a:hover {
 #pokemon-section {
   background-color: lightgray;
 
-  height: 65rem;
+  min-height: 65rem;
   width: 54rem;
 
   display: none;
@@ -220,3 +221,74 @@ a:hover {
 }
 
 /*Media Query*/
+@media screen and (max-width: 768px) {
+  #more-info {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    font: small-caps 400 1.6rem sans-serif;
+
+    height: 6rem;
+    width: 10rem;
+  }
+
+  #continue:hover,
+  #choose-another:hover,
+  #confirm-adventure:hover {
+    box-shadow: none;
+  }
+
+  #pokemon-logo {
+    width: 30rem;
+  }
+
+  #main-section {
+    width: 90vw;
+  }
+
+  #pokeball {
+    width: 25rem;
+  }
+
+  #pokemon-section {
+    width: 85vw;
+  }
+
+  #adventure {
+    width: 75vw;
+  }
+
+  .adventure-text:nth-child(n) {
+    width: 90%;
+  }
+
+  #continue {
+    font-size: 2rem;
+
+    color: black;
+  }
+
+  #img {
+    height: 20rem;
+    width: 17.5rem;
+  }
+
+  .info-content {
+    text-indent: 0;
+  }
+
+  #action-btns {
+    margin-top: 20rem;
+  }
+
+  #more-info {
+    text-align: center;
+
+    flex-direction: column;
+
+    padding: 4rem;
+  }
+}
