@@ -23,7 +23,7 @@ além disso, eu apliquei os conceitos de programação orientada a objetos.</p>
 <hr />
 
 <h2>Preview 🎨</h2>
-<p>O preview do site está em: <a href="https://wesley-nunes.github.io/gotta-catch-em-all/" target="_blank">PokeBuddy</a></p>
+<p>O preview do site está em: <a href="https://wesley-nunes.github.io/PokeBuddy/" target="_blank">PokeBuddy</a></p>
 
 <hr />
 
