@@ -1,4 +1,4 @@
-import { Pokeball } from "./modules/pokeball.js";
+import { Pokeball } from "./services/pokeball.js";
 
 const myPokeball = new Pokeball();
 
