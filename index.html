@@ -11,15 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./src/pokeball-fav-icon.png" />
-    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="shortcut icon" href="./src/media/pokeball-icon.webp" />
+    <link rel="stylesheet" type="text/css" href="./src/main.css" />
+    <script type="module" src="./src/main.js" defer></script>
     <title>Gotta Catch 'Em All</title>
   </head>
   <body>
     <main id="main-wrapper" class="flex-col">
       <header>
         <img
-          src="./src/pokelogo.png"
+          src="./src/media/pokelogo.webp"
           alt="logo da marca pokemon"
           id="pokemon-logo"
         />
@@ -30,7 +31,7 @@
         </h2>
         <input
           type="image"
-          src="./src/pokeball.png"
+          src="./src/media/pokeball.webp"
           alt="pokebola fechada"
           id="pokeball"
         />
@@ -54,7 +55,7 @@
               Aventure-se no mundo incrível dos pokémons.
             </p>
             <img
-              src="./src/pokeball-icon.png"
+              src="./src/media/pokeball-icon.webp"
               alt="#"
               id="pokemon-icon"
               class="center-content"
@@ -62,7 +63,7 @@
             <button id="continue" class="center-content">continuar</button>
           </div>
           <img
-            src="./src/loading.gif"
+            src="./src/media/loading.webp"
             alt="carregando informações"
             id="img"
             class="center-content"
@@ -97,7 +98,6 @@
           >
         </p>
       </footer>
-    </main>
-    <script type="module" src="./main.js"></script>
+    </main>    
   </body>
 </html>
