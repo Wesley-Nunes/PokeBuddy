@@ -1,31 +1,19 @@
-import { Pokeball } from "./services/pokeball.js";
-
-const myPokeball = new Pokeball();
+import playerAction from "./services/playerAction.js";
 
 const pokeball = document.querySelector("#pokeball");
 const closeBtn = document.querySelector("#close-btn");
 const chooseAnother = document.querySelector("#choose-another");
 const confirmAdventure = document.querySelector("#confirm-adventure");
 
-pokeball.addEventListener("click", open);
-closeBtn.addEventListener("click", close);
-chooseAnother.addEventListener("click", repeatCycle);
-confirmAdventure.addEventListener("click", startAdventure);
+pokeball.addEventListener("click", () => playerAction.openPokeball());
 
-function open() {
-  myPokeball.openPokeball();
-}
+closeBtn.addEventListener("click", () => playerAction.closePokeball());
 
-function close() {
-  myPokeball.closePokeball();
-}
-
-function repeatCycle() {
-  close();
-  const delayedOpen = window.setTimeout(() => open(), 350);
+chooseAnother.addEventListener("click", () => {
+  playerAction.closePokeball()
+  const delayedOpen = window.setTimeout(() => playerAction.openPokeball(), 350);
   delayedOpen;
-}
+});
 
-function startAdventure() {
-  myPokeball.startAdventure();
-}
+confirmAdventure.addEventListener("click", () => playerAction.startAdventure());
+
