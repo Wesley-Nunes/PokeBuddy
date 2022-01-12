@@ -67,5 +67,5 @@
 
 <div id="license">
   <h2 id="license">License 📝</h2>
-  <p>This project is under <a href="./LICENSE">ADD THE LICENSE TYPE.</a></p>
+  <p>This project is under <a href="./LICENSE">MIT License.</a></p>
 </div>
