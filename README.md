@@ -17,8 +17,6 @@
 
 <h2>Sobre 💻</h2>
 <p>Criei esse app usando vanilla JavaScript, CSS3 e HTML5.</p>
-<p>O site está responsivo, é feito o consumo da <a href="https://pokeapi.co/" target="_blank">PokeAPI</a>, usando <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX" target="_blank">AJAX</a>,
-além disso, eu apliquei os conceitos de programação orientada a objetos.</p>
 <br />
 <hr />
 
