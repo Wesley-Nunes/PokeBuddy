@@ -41,11 +41,11 @@ button {
 }
 
 a {
-  color: var(--red);
+  color: var(--blue);
 }
 
 a:hover {
-  color: var(--blue);
+  color: black;
 }
 
 /*Page Structure */
