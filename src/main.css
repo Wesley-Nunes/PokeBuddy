@@ -18,13 +18,7 @@
   padding: 0;
 }
 
-body {
-  font: 1.8rem "Roboto", sans-serif;
-
-  background-color: var(--base-color);
-}
-
-button {
+.btn {
   font: small-caps 600 2rem monospace;
 
   color: white;
@@ -40,11 +34,11 @@ button {
   transition: 0.3s ease all;
 }
 
-a {
+.link {
   color: var(--blue);
 }
 
-a:hover {
+.link:hover {
   color: black;
 }
 
@@ -68,28 +62,34 @@ a:hover {
   margin-right: auto;
 }
 
-/*Header Content*/
-#pokemon-logo {
-  width: 54rem;
+.main-wrapper {
+  font: 1.8rem "Roboto", sans-serif;
+
+  background-color: var(--base-color);
+}
+
+.main-wrapper > :nth-child(n) {
+  max-width: 54rem;
+  width: 80vw;
 
   margin: 2rem 0;
 }
 
 /*Main Content*/
-#main-section {
-  height: 75rem;
-  width: 54rem;
+.main-section {
+  height: 70rem;
 }
 
-#title {
+.description {
   font-size: 2rem;
   text-align: center;
 
   padding: 2.5rem 0;
 }
 
-#pokeball {
-  width: 35rem;
+.pokeball {
+  max-width: 54rem;
+  width: 80vw;
 
   border-radius: 50%;
 
@@ -97,15 +97,16 @@ a:hover {
   transition: 0.5s ease all;
 }
 
-#pokeball:hover {
+.pokeball:hover {
   box-shadow: 0 0 1.7rem 2rem hsl(72, 100%, 99%);
 }
 
-#pokemon-section {
+.pokemon-section {
   background-color: lightgray;
 
   min-height: 65rem;
-  width: 54rem;
+  max-width: 54rem;
+  width: 85vw;
 
   display: none;
   position: absolute;
@@ -119,7 +120,7 @@ a:hover {
     0 0.6rem 0.6rem hsla(0, 0%, 0%, 0.23);
 }
 
-#close-btn {
+.close-btn {
   background-color: black;
 
   height: 5rem;
@@ -128,11 +129,44 @@ a:hover {
   margin-left: auto;
 }
 
-#pokemon-section #close-btn:hover {
+.close-btn:hover {
   color: var(--red);
 }
 
-#adventure {
+.img {
+  height: 40rem;
+  width: 35rem;
+}
+
+.info-content {
+  text-indent: 13rem;
+
+  margin: 1rem;
+}
+
+.action-btns {
+  margin-top: 2rem;
+}
+
+.choose-another {
+  background-color: var(--red);
+}
+
+.choose-another:hover {
+  color: black;
+  box-shadow: -1rem 0.5rem 2rem var(--red);
+}
+
+.confirm-adventure {
+  background-color: var(--blue);
+}
+
+.confirm-adventure:hover {
+  color: black;
+  box-shadow: 1rem 0.5rem 2rem var(--blue);
+}
+
+.adventure {
   background-color: lightgray;
 
   height: 55rem;
@@ -160,104 +194,59 @@ a:hover {
   width: 70%;
 }
 
-#pokemon-icon {
+.icon {
   height: 9.6rem;
   width: 9.6rem;
 }
 
-#continue {
+.continue {
   font-size: 3rem;
 
   background-color: var(--yellow);
 }
 
-#continue:hover {
+.continue:hover {
   color: black;
 
   box-shadow: 0 0 3rem var(--yellow);
 }
 
-#img {
-  height: 40rem;
-  width: 35rem;
-}
-
-.info-content {
-  text-indent: 13rem;
-
-  margin: 1rem;
-}
-
-#action-btns {
-  margin-top: 2rem;
-}
-
-#choose-another {
-  background-color: var(--red);
-}
-#choose-another:hover {
-  box-shadow: -1rem 0.5rem 2rem var(--red);
-  color: black;
-}
-#confirm-adventure {
-  background-color: var(--blue);
-}
-#confirm-adventure:hover {
-  color: black;
-
-  box-shadow: 1rem 0.5rem 2rem var(--blue);
-}
-
 /*Footer Content*/
-#more-info {
+.more-info {
   min-height: 10rem;
-  width: 100%;
 
   align-items: center;
 
-  padding: 0 4rem;
-
   border-top: solid 1rem lightgray;
+
+  gap: 4rem;
 }
 
 /*Media Query*/
-@media screen and (max-width: 768px) {
-  #more-info {
-    gap: 4rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  button {
+  .btn {
     font: small-caps 400 1.6rem sans-serif;
 
     height: 6rem;
     width: 10rem;
   }
 
-  #continue:hover,
-  #choose-another:hover,
-  #confirm-adventure:hover {
+  .img {
+    height: 20rem;
+    width: 17.5rem;
+  }
+
+  .action-btns {
+    margin-top: 20rem;
+  }
+
+  .continue:hover,
+  .choose-another:hover,
+  .confirm-adventure:hover {
     box-shadow: none;
   }
 
-  #pokemon-logo {
-    width: 30rem;
-  }
-
-  #main-section {
-    width: 90vw;
-  }
-
-  #pokeball {
-    width: 25rem;
-  }
-
-  #pokemon-section {
-    width: 85vw;
-  }
-
-  #adventure {
+  .adventure {
     width: 75vw;
   }
 
@@ -265,26 +254,17 @@ a:hover {
     width: 90%;
   }
 
-  #continue {
+  .continue {
     font-size: 2rem;
 
     color: black;
-  }
-
-  #img {
-    height: 20rem;
-    width: 17.5rem;
   }
 
   .info-content {
     text-indent: 0;
   }
 
-  #action-btns {
-    margin-top: 20rem;
-  }
-
-  #more-info {
+  .more-info {
     text-align: center;
 
     flex-direction: column;

@@ -17,30 +17,48 @@
     <title>PokeBuddy</title>
   </head>
   <body>
-    <main id="main-wrapper" class="flex-col">
-      <header>
-        <img
-          src="./src/media/pokelogo.webp"
-          alt="logo da marca pokemon"
-          id="pokemon-logo"
-        />
-      </header>
-      <section id="main-section" class="flex-col">
-        <h2 id="title">
+    <main class="main-wrapper flex-col">
+      <img
+        src="./src/media/pokelogo.webp"
+        alt="logo da marca pokemon"
+        class="pokemon-logo"
+      />
+      <section class="main-section flex-col">
+        <h2 class="description">
           Abra a pokebola para ganhar um pokémon e iniciar sua jornada!
         </h2>
         <input
           type="image"
           src="./src/media/pokeball.webp"
           alt="pokebola fechada"
-          id="pokeball"
+          class="pokeball"
         />
-        <!-- This section starts hidden -->
-        <div id="pokemon-section">
-          <button id="close-btn">X</button>
-          <div id="adventure">
+        <div class="pokemon-section">
+          <button class="btn close-btn">X</button>
+          <div class="pokemon-info">
+            <img
+              src="./src/media/loading.webp"
+              alt="carregando informações"
+              id="pokemon-img"
+              class="center-content img"
+            />
+            <p id="name" class="info-content">
+              <!-- The content of span will be insert by script -->
+              Nome: <span id="pokemon-name"></span>
+            </p>
+            <p id="type" class="info-content">
+              <!-- The content of span will be insert by script -->
+              Tipo: <span id="pokemon-type"></span>
+            </p>
+            <span class="flex-row action-btns">
+              <button class="btn choose-another">escolher outro pokémon?</button>
+              <button class="btn confirm-adventure">iniciar jornada!</button>
+            </span>
+          </div>
+          <!-- This section starts hidden -->
+          <div class="adventure">
             <p class="adventure-text">
-              Agora, junto com <span id="choosed-poke-name"></span>, você está
+              Agora, junto com <span id="choosed-pokemon-name"></span>, você está
               pronto para iniciar sua jornada.
             </p>
             <p class="adventure-text">
@@ -58,44 +76,32 @@
               src="./src/media/pokeball-icon.webp"
               alt="#"
               id="pokemon-icon"
-              class="center-content"
+              class="center-content icon"
             />
-            <button id="continue" class="center-content">continuar</button>
+            <button class="center-content btn continue">continuar</button>
           </div>
-          <img
-            src="./src/media/loading.webp"
-            alt="carregando informações"
-            id="img"
-            class="center-content"
-          />
-          <p id="name" class="info-content">
-            Nome: <span id="poke-name"></span>
-          </p>
-          <p id="type" class="info-content">
-            Tipo: <span id="poke-type"></span>
-          </p>
-          <span id="action-btns" class="flex-row">
-            <button id="choose-another">escolher outro pokémon?</button>
-            <button id="confirm-adventure">iniciar jornada!</button>
-          </span>
         </div>
       </section>
-      <footer id="more-info" class="flex-row">
+      <footer class="flex-row more-info">
         <p>
           Site desenvolvido por
           <a
             href="https://www.linkedin.com/in/dev-wesley-nunes/"
             target="_blank"
-            >@Wesley-Nunes</a
+            class="link"
           >
+            Wesley Monteiro
+          </a>
         </p>
         <p>
           Para mais informações acesse o
           <a
-            href="https://github.com/Wesley-Nunes/gotta-catch-em-all"
+            href="https://github.com/Wesley-Nunes/PokeBuddy"
             target="_blank"
-            >repositorio no github.</a
+            class="link"
           >
+            repositorio no github.
+          </a>
         </p>
       </footer>
     </main>    
